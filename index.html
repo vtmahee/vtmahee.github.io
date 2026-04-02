@@ -1,31 +1,172 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Your Name - Resume</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vincent T. Mahee | Resume</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; line-height: 1.6; padding: 0 20px; }
-    h1, h2 { color: #222; }
-    a { color: #0066cc; }
+    :root {
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --border: #e5e7eb;
+      --heading: #111827;
+    }
+
+     {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .resume-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: var(--heading);
+      letter-spacing: 0.5px;
+    }
+
+    .contact {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      color: var(--heading);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 6px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .job, .project, .education-item {
+      margin-bottom: 20px;
+    }
+
+    .job-header, .project-header, .education-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+
+    .job-title, .project-title, .degree {
+      font-weight: bold;
+      color: var(--heading);
+    }
+
+    .company, .school {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .date, .location {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    ul {
+      margin: 8px 0 0 20px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .skill-group h3 {
+      margin: 0 0 8px 0;
+      font-size: 1rem;
+      color: var(--heading);
+    }
+
+    .skill-group p {
+      margin: 0;
+      color: var(--text);
+    }
+
+    @media (max-width: 700px) {
+      .resume-card {
+        padding: 24px;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Your Name</h1>
-  <p>Email: your@email.com | LinkedIn: <a href="#">LinkedIn Profile</a></p>
+  <div class="container">
+    <div class="resume-card">
+      <header>
+        <h1>Vincent T. Mahee</h1>
+        <div class="contact">
+          <span><a href="mailto:vincent.t.mahee@gmail.com">vincent.t.mahee@gmail.com</a></span>
+          |
+          <span>443-758-3485</span>
+          |
+          <span>Pikesville, MD 21208</span>
+        </div>
+      </header>
 
-  <h2>Summary</h2>
-  <p>Short professional summary here.</p>
+      <section>
+        <h2>Professional Experience</h2>
 
-  <h2>Experience</h2>
-  <p><strong>Job Title</strong> — Company Name</p>
-  <p>Describe your accomplishments.</p>
-
-  <h2>Projects</h2>
-  <p>Project name — short description.</p>
-
-  <h2>Education</h2>
-  <p>Degree, School Name</p>
-
-  <p><a href="resume.pdf" target="_blank">Download PDF Resume</a></p>
-</body>
-</html>
+        <div class="job">
+          <div class="job-header">
+            <div>
+              <div class="company">FM Global – Remote</div>
+              <div class="job-title">Service Desk Technician</div>
+            </div>
+            <div class="date">Jul 29, 2024 – Present</div>
