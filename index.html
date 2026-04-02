@@ -4,304 +4,317 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vincent T. Mahee | Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #f7f9fc;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --accent: #2563eb;
-      --border: #e5e7eb;
-      --heading: #111827;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
+      background: #1B1B25;
+      color: #fff;
+      font-family: 'Josefin Sans', sans-serif;
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      padding: 0;
     }
 
     .container {
-      max-width: 960px;
-      margin: 40px auto;
-      padding: 0 20px;
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 0 80px;
     }
 
-    .resume-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 36px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    .separator {
+      width: 30%;
+      border: 0;
+      border-top: 2px solid #DB4D57;
+      margin: 20px 0 30px;
     }
 
-    header {
-      text-align: center;
-      margin-bottom: 32px;
+    .title {
+      margin-top: 100px;
+      margin-bottom: 10px;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-      color: var(--heading);
-      letter-spacing: 0.5px;
+    .title a {
+      color: #DB4D57;
+      text-decoration: none;
+    }
+
+    .title a:hover {
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .title hr {
+      width: 75%;
+      border: 0;
+      border-top: 2px solid #DB4D57;
+      margin-left: 0;
+    }
+
+    .name {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 0.15rem;
+      margin-bottom: 10px;
     }
 
     .contact {
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 0.98rem;
+      font-size: 1.2rem;
+      letter-spacing: 0.08rem;
+      color: #d6d6d6;
+      line-height: 1.8;
     }
 
     .contact a {
-      color: var(--accent);
+      color: #DB4D57;
       text-decoration: none;
     }
 
     .contact a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      margin-bottom: 30px;
-    }
-
-    h2 {
-      font-size: 1.15rem;
-      color: var(--heading);
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 6px;
-      margin-bottom: 16px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-
-    .job, .project, .education-item {
-      margin-bottom: 20px;
-    }
-
-    .job-header, .project-header, .education-header {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-bottom: 6px;
-    }
-
-    .job-title, .project-title, .degree {
       font-weight: bold;
-      color: var(--heading);
     }
 
-    .company, .school {
-      color: var(--accent);
+    .summary {
+      padding: 20px 0;
+    }
+
+    .summary p {
+      font-size: 1.6rem;
+      letter-spacing: 0.2rem;
+      line-height: 1.8;
+    }
+
+    .section-heading {
+      font-size: 2rem;
+      color: #DB4D57;
+      margin-top: 60px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+    }
+
+    .work-experience {
+      padding: 20px 0;
+    }
+
+    .work-experience .experience-title {
+      margin-top: 50px;
+      font-size: 1.8rem;
+      color: #fff;
       font-weight: 600;
+      letter-spacing: 0.15rem;
     }
 
-    .date, .location {
-      color: var(--muted);
-      font-size: 0.95rem;
+    .work-experience .experience-meta {
+      margin-top: 10px;
+      color: #DB4D57;
+      font-size: 1.2rem;
+      letter-spacing: 0.1rem;
+    }
+
+    .work-experience .experience-summary {
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
+
+    .work-experience p,
+    .work-experience li,
+    .education p,
+    .projects p,
+    .projects li,
+    .skills p,
+    .training li {
+      font-size: 1.25rem;
+      letter-spacing: 0.08rem;
+      line-height: 1.8;
+      color: #f1f1f1;
     }
 
     ul {
-      margin: 8px 0 0 20px;
-      padding: 0;
+      padding-left: 24px;
     }
 
     li {
-      margin-bottom: 8px;
+      margin-bottom: 14px;
     }
 
-    .skills-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 18px;
+    .education,
+    .projects,
+    .skills,
+    .training {
+      padding: 20px 0;
     }
 
-    .skill-group h3 {
-      margin: 0 0 8px 0;
-      font-size: 1rem;
-      color: var(--heading);
+    .subheading {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      letter-spacing: 0.12rem;
+      font-weight: 600;
     }
 
-    .skill-group p {
-      margin: 0;
-      color: var(--text);
+    .muted {
+      color: #d0d0d0;
     }
 
-    @media (max-width: 700px) {
-      .resume-card {
-        padding: 24px;
+    @media (max-width: 768px) {
+      .name {
+        font-size: 2.2rem;
       }
 
-      header h1 {
-        font-size: 1.8rem;
+      .summary p,
+      .work-experience p,
+      .work-experience li,
+      .education p,
+      .projects p,
+      .projects li,
+      .skills p,
+      .training li {
+        font-size: 1.05rem;
+        letter-spacing: 0.04rem;
+      }
+
+      .section-heading {
+        font-size: 1.5rem;
+      }
+
+      .work-experience .experience-title {
+        font-size: 1.35rem;
+      }
+
+      .contact {
+        font-size: 1rem;
+      }
+
+      .separator {
+        width: 60%;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="resume-card">
-      <header>
-        <h1>Vincent T. Mahee</h1>
-        <div class="contact">
-          <span><a href="mailto:vincent.t.mahee@gmail.com">vincent.t.mahee@gmail.com</a></span>
-          |
-          <span>443-758-3485</span>
-          |
-          <span>Pikesville, MD 21208</span>
-        </div>
-      </header>
+    <section class="title">
+      <div class="name">Vincent T. Mahee</div>
+      <div class="contact">
+        <a href="mailto:vincent.t.mahee@gmail.com">vincent.t.mahee@gmail.com</a><br>
+        443-758-3485<br>
+        Pikesville, MD 21208
+      </div>
+      <hr>
+    </section>
 
-      <section>
-        <h2>Professional Experience</h2>
+    <section class="summary">
+      <div class="section-heading">Professional Summary</div>
+      <hr class="separator">
+      <p>
+        IT support professional with extensive experience in service desk operations, enterprise troubleshooting,
+        accessibility support, cloud and network technologies, and customer-facing technical support.
+        Strong background in incident resolution, system documentation, ITSM workflows, and improving support efficiency.
+      </p>
+    </section>
 
-        <div class="job">
-          <div class="job-header">
-            <div>
-              <div class="company">FM Global – Remote</div>
-              <div class="job-title">Service Desk Technician</div>
-            </div>
-            <div class="date">Jul 29, 2024 – Present</div>
-          </div>
-          <ul>
-            <li>Handle 25–30 daily customer interactions in a high-volume, single point-of-contact help desk environment.</li>
-            <li>Achieve and maintain 80%+ first-call resolution through advanced troubleshooting and diagnostic techniques.</li>
-            <li>Provide support for Microsoft Outlook, Active Directory file shares, VPN connectivity, network issues, and software installations.</li>
-            <li>Document incidents, resolutions, and troubleshooting steps in ServiceNow, ensuring accurate tracking and SLA compliance.</li>
-            <li>Act as a customer advocate, delivering high-quality support to internal and external users while collaborating with team members to resolve complex issues.</li>
-          </ul>
-        </div>
+    <section class="work-experience">
+      <div class="section-heading">Professional Experience</div>
+      <hr class="separator">
 
-        <div class="job">
-          <div class="job-header">
-            <div>
-              <div class="company">Yorktel – Woodlawn, MD</div>
-              <div class="job-title">SSA Support Engineer</div>
-            </div>
-            <div class="date">9/2016 – 5/2024</div>
-          </div>
-          <ul>
-            <li>Supported federal training environments via Adobe Connect, maintaining 95%+ user satisfaction ratings.</li>
-            <li>Managed and configured Active Directory accounts, IP allocations, and SSTV network devices.</li>
-            <li>Coordinated hardware deployment logistics, ensuring timely delivery, setup, and operational readiness.</li>
-            <li>Provided accessibility support in compliance with Section 504/508, improving participation for users with disabilities.</li>
-            <li>Achieved an average resolution time of less than 3 days, consistently exceeding SLA expectations.</li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <div class="job-header">
-            <div>
-              <div class="company">Oracle – Columbia, MD</div>
-              <div class="job-title">Solution Analyst</div>
-            </div>
-            <div class="date">9/2013 – 9/2016</div>
-          </div>
-          <ul>
-            <li>Provided level two support resolving complex technical issues using the Knowledge Base, product documentation, web resources, and lab testing to ensure optimal performance and end-user satisfaction.</li>
-            <li>Reduced Mean Time to Resolution (MTTR) by 20% through back-end troubleshooting methods including log file analysis, database queries, and targeted MySQL database field updates.</li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <div class="job-header">
-            <div>
-              <div class="company">Oracle – Columbia, MD</div>
-              <div class="job-title">Customer Support Analyst</div>
-            </div>
-            <div class="date">8/2012 – 9/2013</div>
-          </div>
-          <ul>
-            <li>Provided technical and functional support to Oracle’s global customer base via phone and electronic channels.</li>
-            <li>Verified customer entitlement for support and collaborated with the Support Operations HOST team when entitlement required clarification.</li>
-            <li>Handled a broad range of product- and system-related service requests.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section>
-        <h2>Education</h2>
-
-        <div class="education-item">
-          <div class="education-header">
-            <div>
-              <div class="school">Johns Hopkins University – Online</div>
-              <div class="degree">Master of Science in Artificial Intelligence</div>
-            </div>
-            <div class="location">Planned / Applicant</div>
-          </div>
-        </div>
-
-        <div class="education-item">
-          <div class="education-header">
-            <div>
-              <div class="school">University of Maryland University College – Largo, MD</div>
-              <div class="degree">Bachelor of Science in Computer and Information Science</div>
-            </div>
-            <div class="date">2015</div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>Classes and Training</h2>
+      <div class="experience-title">Service Desk Technician</div>
+      <div class="experience-meta">FM Global – Remote | Jul 29, 2024 – Present</div>
+      <div class="experience-summary">
         <ul>
-          <li>Federal Agency Training – Comprehensive training on SSA departments and systems, including privacy and data protection, information security, accessibility, and Section 504/508 compliance.</li>
-          <li>University/Employee Training – MySQL, Java, Oracle Database, Cloud Applications, Solaris 11.</li>
-          <li>CompTIA A+ Certification – May 2010.</li>
+          <li>Handle 25–30 daily customer interactions in a high-volume, single point-of-contact help desk environment.</li>
+          <li>Achieve and maintain 80%+ first-call resolution through advanced troubleshooting and diagnostic techniques.</li>
+          <li>Provide support for Microsoft Outlook, Active Directory file shares, VPN connectivity, network issues, and software installations.</li>
+          <li>Document incidents, resolutions, and troubleshooting steps in ServiceNow, ensuring accurate tracking and SLA compliance.</li>
+          <li>Act as a customer advocate, delivering high-quality support to internal and external users while collaborating with team members to resolve complex issues.</li>
         </ul>
-      </section>
+      </div>
 
-      <section>
-        <h2>Projects</h2>
+      <div class="experience-title">SSA Support Engineer</div>
+      <div class="experience-meta">Yorktel – Woodlawn, MD | 9/2016 – 5/2024</div>
+      <div class="experience-summary">
+        <ul>
+          <li>Supported federal training environments via Adobe Connect, maintaining 95%+ user satisfaction ratings.</li>
+          <li>Managed and configured Active Directory accounts, IP allocations, and SSTV network devices.</li>
+          <li>Coordinated hardware deployment logistics, ensuring timely delivery, setup, and operational readiness.</li>
+          <li>Provided accessibility support in compliance with Section 504/508, improving participation for users with disabilities.</li>
+          <li>Achieved an average resolution time of less than 3 days, consistently exceeding SLA expectations.</li>
+        </ul>
+      </div>
 
-        <div class="project">
-          <div class="project-header">
-            <div>
-              <div class="project-title">ResolveAI – Multimodal Case Intelligence &amp; Documentation Engine</div>
-              <div class="company">AI-Powered IT Service Management (ITSM) Workflow Solution</div>
-            </div>
-          </div>
-          <ul>
-            <li>Designed and conceptualized an AI-driven platform to transform fragmented service desk inputs, including voice transcripts, chat logs, and screenshots, into structured, ITIL-aligned incident documentation.</li>
-            <li>Built a functional React-based UI prototype (ResolveAI Workspace) featuring multimodal ingestion, real-time transcription display, OCR extraction, and structured ticket outputs.</li>
-            <li>Implemented ITIL v4-aligned documentation logic, including incident categorization, symptom analysis, troubleshooting logs, and resolution tracking.</li>
-            <li>Architected a hybrid knowledge retrieval system integrating internal knowledge bases with controlled external web sources, ensuring source attribution and trust scoring.</li>
-            <li>Integrated enterprise security and compliance considerations, including PII/PHI redaction, ISO 27001 alignment, SOC 2 readiness, and NIST AI Risk Management principles.</li>
-            <li>Designed integration workflows for major ticketing systems, including ServiceNow, Jira Service Management, Zendesk, Freshservice, and Zoho Desk, with one-click data push capability.</li>
-            <li>Focused on improving service desk efficiency, reducing manual documentation effort, and increasing consistency and quality of incident records.</li>
-          </ul>
-        </div>
-      </section>
+      <div class="experience-title">Solution Analyst</div>
+      <div class="experience-meta">Oracle – Columbia, MD | 9/2013 – 9/2016</div>
+      <div class="experience-summary">
+        <ul>
+          <li>Provided level two support resolving complex technical issues using the Knowledge Base, product documentation, web resources, and lab testing to ensure optimal performance and end-user satisfaction.</li>
+          <li>Reduced Mean Time to Resolution (MTTR) by 20% through back-end troubleshooting methods including log file analysis, database queries, and targeted MySQL database field updates.</li>
+        </ul>
+      </div>
 
-      <section>
-        <h2>Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-group">
-            <h3>Technical Skills</h3>
-            <p>Assistive Technologies (Jaws/NVDA), Active Directory, Adobe Connect, Azure, Cloud Computing, Cybersecurity, Text-to-speech, TCP/IP, LAN, Linux, Inventory &amp; Tracking, Networking, Office 365, Touchscreens, Remote Support, SQL, Virtualization</p>
-          </div>
+      <div class="experience-title">Customer Support Analyst</div>
+      <div class="experience-meta">Oracle – Columbia, MD | 8/2012 – 9/2013</div>
+      <div class="experience-summary">
+        <ul>
+          <li>Provided technical and functional support to Oracle’s global customer base via phone and electronic channels.</li>
+          <li>Verified customer entitlement for support and collaborated with the Support Operations HOST team when entitlement required clarification.</li>
+          <li>Handled a broad range of product- and system-related service requests.</li>
+        </ul>
+      </div>
+    </section>
 
-          <div class="skill-group">
-            <h3>Programming Languages</h3>
-            <p>C/C++, Java, MySQL, Python</p>
-          </div>
+    <section class="education">
+      <div class="section-heading">Education</div>
+      <hr class="separator">
 
-          <div class="skill-group">
-            <h3>Ticketing Systems</h3>
-            <p>HP Service Manager (CAPRS), Jira Service Desk, ServiceNow, Zendesk</p>
-          </div>
-        </div>
-      </section>
-    </div>
+      <div class="subheading">Johns Hopkins University – Online</div>
+      <p class="muted">Master of Science in Artificial Intelligence (Planned / Applicant)</p>
+
+      <div class="subheading">University of Maryland University College – Largo, MD</div>
+      <p class="muted">Bachelor of Science in Computer and Information Science | 2015</p>
+    </section>
+
+    <section class="training">
+      <div class="section-heading">Classes and Training</div>
+      <hr class="separator">
+      <ul>
+        <li>Federal Agency Training – Comprehensive training on SSA departments and systems, including privacy and data protection, information security, accessibility, and Section 504/508 compliance.</li>
+        <li>University/Employee Training – MySQL, Java, Oracle Database, Cloud Applications, Solaris 11.</li>
+        <li>CompTIA A+ Certification – May 2010.</li>
+      </ul>
+    </section>
+
+    <section class="projects">
+      <div class="section-heading">Projects</div>
+      <hr class="separator">
+
+      <div class="subheading">ResolveAI – Multimodal Case Intelligence &amp; Documentation Engine</div>
+      <p class="muted">AI-Powered IT Service Management (ITSM) Workflow Solution</p>
+      <ul>
+        <li>Designed and conceptualized an AI-driven platform to transform fragmented service desk inputs, including voice transcripts, chat logs, and screenshots, into structured, ITIL-aligned incident documentation.</li>
+        <li>Built a functional React-based UI prototype (ResolveAI Workspace) featuring multimodal ingestion, real-time transcription display, OCR extraction, and structured ticket outputs.</li>
+        <li>Implemented ITIL v4-aligned documentation logic, including incident categorization, symptom analysis, troubleshooting logs, and resolution tracking.</li>
+        <li>Architected a hybrid knowledge retrieval system integrating internal knowledge bases with controlled external web sources, ensuring source attribution and trust scoring.</li>
+        <li>Integrated enterprise security and compliance considerations, including PII/PHI redaction, ISO 27001 alignment, SOC 2 readiness, and NIST AI Risk Management principles.</li>
+        <li>Designed integration workflows for major ticketing systems, including ServiceNow, Jira Service Management, Zendesk, Freshservice, and Zoho Desk, with one-click data push capability.</li>
+        <li>Focused on improving service desk efficiency, reducing manual documentation effort, and increasing consistency and quality of incident records.</li>
+      </ul>
+    </section>
+
+    <section class="skills">
+      <div class="section-heading">Skills</div>
+      <hr class="separator">
+
+      <div class="subheading">Technical Skills</div>
+      <p>Assistive Technologies (Jaws/NVDA), Active Directory, Adobe Connect, Azure, Cloud Computing, Cybersecurity, Text-to-speech, TCP/IP, LAN, Linux, Inventory &amp; Tracking, Networking, Office 365, Touchscreens, Remote Support, SQL, Virtualization</p>
+
+      <div class="subheading">Programming Languages</div>
+      <p>C/C++, Java, MySQL, Python</p>
+
+      <div class="subheading">Ticketing Systems</div>
+      <p>HP Service Manager (CAPRS), Jira Service Desk, ServiceNow, Zendesk</p>
+    </section>
   </div>
 </body>
 </html>
