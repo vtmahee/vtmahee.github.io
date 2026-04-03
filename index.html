@@ -12,43 +12,42 @@
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100%;
       font-family: 'Poppins', sans-serif;
       background: #d8edf6;
       color: #1f2937;
     }
 
     .page {
-      max-width: 1100px;
-      margin: 30px auto;
-      background: #ffffff;
+      width: 100%;
+      min-height: 100vh;
       display: grid;
       grid-template-columns: 320px 1fr;
-      min-height: 100vh;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      background: #ffffff;
     }
 
     .sidebar {
       background: #08354a;
       color: white;
-      padding: 40px 35px;
+      padding: 40px 30px;
+    }
+
+    .photo-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 25px;
     }
 
     .photo {
-      width: 180px;
-      height: 180px;
+      width: 190px;
+      height: 190px;
       border-radius: 50%;
-      background: #e5e7eb;
-      margin: 0 auto 25px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #08354a;
-      font-size: 0.95rem;
-      text-align: center;
-      padding: 20px;
-      font-weight: 600;
+      object-fit: cover;
+      border: 5px solid rgba(255,255,255,0.15);
     }
 
     .name {
@@ -62,7 +61,7 @@
 
     .role {
       text-align: center;
-      font-size: 1.05rem;
+      font-size: 1rem;
       color: #dbeafe;
       margin-bottom: 28px;
       text-transform: uppercase;
@@ -80,7 +79,7 @@
     }
 
     .sidebar-section h2 {
-      font-size: 1.35rem;
+      font-size: 1.3rem;
       margin-bottom: 16px;
       text-transform: uppercase;
       letter-spacing: 0.06em;
@@ -105,12 +104,13 @@
     }
 
     .content {
-      padding: 45px 40px;
+      padding: 50px 55px;
       background: #ffffff;
+      width: 100%;
     }
 
     .content-section {
-      margin-bottom: 40px;
+      margin-bottom: 42px;
     }
 
     .content-section h2 {
@@ -122,16 +122,18 @@
     }
 
     .summary-text {
-      font-size: 1.02rem;
-      line-height: 1.9;
+      font-size: 1.05rem;
+      line-height: 1.95;
       color: #4b5563;
+      max-width: 100%;
     }
 
     .job {
       display: grid;
-      grid-template-columns: 170px 1fr;
-      gap: 24px;
-      margin-bottom: 28px;
+      grid-template-columns: 180px 1fr;
+      gap: 28px;
+      margin-bottom: 30px;
+      align-items: start;
     }
 
     .job-left {
@@ -149,13 +151,6 @@
       text-transform: uppercase;
     }
 
-    .job-right h4 {
-      margin: 0 0 12px;
-      font-size: 1rem;
-      color: #374151;
-      font-weight: 600;
-    }
-
     .job-right ul {
       margin: 0;
       padding-left: 20px;
@@ -163,7 +158,7 @@
 
     .job-right li {
       margin-bottom: 9px;
-      line-height: 1.75;
+      line-height: 1.8;
       color: #4b5563;
     }
 
@@ -188,7 +183,7 @@
 
     .content-section li {
       margin-bottom: 10px;
-      line-height: 1.75;
+      line-height: 1.8;
       color: #4b5563;
     }
 
@@ -204,17 +199,21 @@
 
       .job {
         grid-template-columns: 1fr;
-        gap: 8px;
+        gap: 10px;
       }
 
       .content,
       .sidebar {
-        padding: 30px 24px;
+        padding: 30px 22px;
       }
 
       .photo {
         width: 150px;
         height: 150px;
+      }
+
+      .content-section h2 {
+        font-size: 1.5rem;
       }
     }
   </style>
@@ -222,7 +221,9 @@
 <body>
   <div class="page">
     <aside class="sidebar">
-      <div class="photo">Add Your Photo</div>
+      <div class="photo-wrap">
+        <img src="1761845729910.jpeg" alt="Vincent T. Mahee" class="photo">
+      </div>
 
       <div class="name">Vincent T. Mahee</div>
       <div class="role">IT Support Professional</div>
@@ -231,7 +232,7 @@
 
       <div class="sidebar-section">
         <h2>Contact Info</h2>
-        <div class="contact-line">vincent.t.mahee@gmail.com</div>
+        <div class="contact-line"><a href="mailto:vincent.t.mahee@gmail.com">vincent.t.mahee@gmail.com</a></div>
         <div class="contact-line">443-758-3485</div>
         <div class="contact-line">Pikesville, MD 21208</div>
         <div class="contact-line"><a href="https://vtmahee.github.io">vtmahee.github.io</a></div>
