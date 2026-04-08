@@ -239,7 +239,7 @@
 
     .job {
       display: grid;
-      grid-template-columns: 180px 1fr;
+      grid-template-columns: 190px 1fr;
       gap: 24px;
       margin-bottom: 30px;
       align-items: start;
@@ -252,6 +252,35 @@
       text-transform: uppercase;
       line-height: 1.7;
       letter-spacing: 0.03em;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .job-company {
+      display: block;
+    }
+
+    .job-org-logo {
+      margin-top: 10px;
+      width: 120px;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      background: transparent;
+    }
+
+    .job-org-logo.fm {
+      width: 78px;
+    }
+
+    .job-org-logo.oracle {
+      width: 110px;
+    }
+
+    .job-org-logo.yorktel {
+      width: 120px;
     }
 
     .job-right h3 {
@@ -357,6 +386,16 @@
         height: 64px;
       }
 
+      .job-org-logo,
+      .job-org-logo.yorktel,
+      .job-org-logo.oracle {
+        width: 100px;
+      }
+
+      .job-org-logo.fm {
+        width: 68px;
+      }
+
       .skill-grid {
         grid-template-columns: 1fr;
       }
@@ -383,7 +422,7 @@
       <div class="sidebar-section">
         <h2>Contact Info</h2>
         <div class="contact-line">
-          <a href="mailto:vincent.t.mahee@gmail.com">vincent.t.mahee@gmail.com</a>
+          <a href="mailto:vtmahee@zohomail.com">vtmahee@zohomail.com</a>
         </div>
         <div class="contact-line">
           <a href="tel:14437583485">443-758-3485</a>
@@ -472,7 +511,8 @@
         <div class="job">
           <div class="job-left">
             2024 – Present<br>
-            FM Global
+            <span class="job-company">FM Global</span>
+            <img src="fm-logo.png" alt="FM logo" class="job-org-logo fm">
           </div>
           <div class="job-right">
             <h3>Service Desk Technician</h3>
@@ -489,7 +529,8 @@
         <div class="job">
           <div class="job-left">
             2016 – 2024<br>
-            Yorktel
+            <span class="job-company">Yorktel</span>
+            <img src="yorktel-logo.png" alt="Yorktel logo" class="job-org-logo yorktel">
           </div>
           <div class="job-right">
             <h3>SSA Support Engineer</h3>
@@ -506,7 +547,8 @@
         <div class="job">
           <div class="job-left">
             2013 – 2016<br>
-            Oracle
+            <span class="job-company">Oracle</span>
+            <img src="oracle-logo.png" alt="Oracle logo" class="job-org-logo oracle">
           </div>
           <div class="job-right">
             <h3>Solution Analyst</h3>
@@ -520,7 +562,8 @@
         <div class="job">
           <div class="job-left">
             2012 – 2013<br>
-            Oracle
+            <span class="job-company">Oracle</span>
+            <img src="oracle-logo.png" alt="Oracle logo" class="job-org-logo oracle">
           </div>
           <div class="job-right">
             <h3>Customer Support Analyst</h3>
