@@ -62,8 +62,8 @@
     }
 
     .photo {
-      width: 190px;
-      height: 190px;
+      width: 220px;
+      height: 220px;
       border-radius: 50%;
       object-fit: cover;
       display: block;
@@ -74,12 +74,14 @@
 
     .name {
       text-align: center;
-      font-size: 2rem;
+      width: 220px;
+      margin: 0 auto 8px;
+      font-size: 1.45rem;
       font-weight: 700;
       line-height: 1.15;
       text-transform: uppercase;
-      margin-bottom: 8px;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
     }
 
     .role {
@@ -276,7 +278,7 @@
     }
 
     .job-org-logo.oracle {
-      width: 110px;
+      width: 165px;
     }
 
     .job-org-logo.yorktel {
@@ -314,6 +316,23 @@
       font-weight: 600;
       color: #374151;
       margin-bottom: 14px;
+    }
+
+    .project-link {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    .project-link a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .project-link a:hover {
+      text-decoration: underline;
     }
 
     .project-block {
@@ -381,8 +400,14 @@
       }
 
       .photo {
-        width: 155px;
-        height: 155px;
+        width: 180px;
+        height: 180px;
+      }
+
+      .name {
+        width: 100%;
+        font-size: 1.2rem;
+        white-space: normal;
       }
 
       .edu-logo {
@@ -391,9 +416,12 @@
       }
 
       .job-org-logo,
-      .job-org-logo.yorktel,
-      .job-org-logo.oracle {
+      .job-org-logo.yorktel {
         width: 100px;
+      }
+
+      .job-org-logo.oracle {
+        width: 135px;
       }
 
       .job-org-logo.fm {
@@ -516,7 +544,7 @@
           <div class="job-left">
             2024 – Present<br>
             <span class="job-company">FM Global</span>
-            <img src="fm-logo.png" alt="FM logo" class="job-org-logo fm">
+            <img src="oracle-logo.png" alt="Oracle logo" class="job-org-logo oracle">
           </div>
           <div class="job-right">
             <h3>Service Desk Technician</h3>
@@ -552,7 +580,7 @@
           <div class="job-left">
             2013 – 2016<br>
             <span class="job-company">Oracle</span>
-            <img src="oracle-logo.png" alt="Oracle logo" class="job-org-logo oracle">
+            <img src="fm-logo.png" alt="FM logo" class="job-org-logo fm">
           </div>
           <div class="job-right">
             <h3>Solution Analyst</h3>
@@ -567,7 +595,7 @@
           <div class="job-left">
             2012 – 2013<br>
             <span class="job-company">Oracle</span>
-            <img src="oracle-logo.png" alt="Oracle logo" class="job-org-logo oracle">
+            <img src="fm-logo.png" alt="FM logo" class="job-org-logo fm">
           </div>
           <div class="job-right">
             <h3>Customer Support Analyst</h3>
@@ -577,36 +605,6 @@
               <li>Handled a broad range of product- and system-related service requests.</li>
             </ul>
           </div>
-        </div>
-      </section>
-
-      <section class="content-section">
-        <h2>Projects</h2>
-
-        <div class="project-block">
-          <div class="project-title">ResolveAI – Multimodal Case Intelligence &amp; Documentation Engine</div>
-          <div class="project-subtitle">AI-Powered IT Service Management (ITSM) Workflow Solution</div>
-          <ul>
-            <li>Designed and conceptualized an AI-driven platform to transform fragmented service desk inputs, including voice transcripts, chat logs, and screenshots, into structured, ITIL-aligned incident documentation.</li>
-            <li>Built a functional React-based UI prototype featuring multimodal ingestion, real-time transcription display, OCR extraction, and structured ticket outputs.</li>
-            <li>Implemented ITIL v4-aligned documentation logic, including incident categorization, symptom analysis, troubleshooting logs, and resolution tracking.</li>
-            <li>Architected a hybrid knowledge retrieval system integrating internal knowledge bases with controlled external web sources, ensuring source attribution and trust scoring.</li>
-            <li>Integrated enterprise security and compliance considerations, including PII/PHI redaction, ISO 27001 alignment, SOC 2 readiness, and NIST AI Risk Management principles.</li>
-            <li>Designed integration workflows for major ticketing systems, including ServiceNow, Jira Service Management, Zendesk, Freshservice, and Zoho Desk.</li>
-          </ul>
-        </div>
-
-        <div class="project-block">
-          <div class="project-title">Home Lab Network Hardening &amp; Zero-Trust Architecture</div>
-          <div class="project-subtitle">Enterprise-Grade Perimeter Security &amp; Network Segmentation</div>
-          <ul>
-            <li>Designed and implemented a multi-layer security architecture utilizing pfSense and Proxmox VE to move from a flat network to a high-security, segmented environment.</li>
-            <li>Architected a Zero-Trust network model by implementing 802.1Q VLAN tagging, isolating critical management interfaces, IoT devices, and public-facing services into restricted security zones.</li>
-            <li>Deployed and tuned Suricata (IDS/IPS) for real-time traffic analysis and threat prevention, utilizing automated rule-set updates to mitigate emerging network vulnerabilities.</li>
-            <li>Established secure remote access infrastructure via WireGuard/OpenVPN, eliminating the need for external port forwarding and reducing the global attack surface.</li>
-            <li>Configured advanced firewall policies and inter-VLAN routing rules to enforce the principle of least privilege (PoLP) across all virtualized workloads and physical endpoints.</li>
-            <li>Integrated host-level security controls within Proxmox using local firewalls and automated logging to monitor and alert on unauthorized access attempts or lateral movement.</li>
-          </ul>
         </div>
       </section>
 
@@ -639,6 +637,40 @@
           <li>University/Employee Training – MySQL, Java, Oracle Database, Cloud Applications, Solaris 11.</li>
           <li>CompTIA A+ Certification – May 2010.</li>
         </ul>
+      </section>
+
+      <section class="content-section">
+        <h2>Projects</h2>
+
+        <div class="project-block">
+          <div class="project-title">ResolveAI – Multimodal Case Intelligence &amp; Documentation Engine</div>
+          <div class="project-subtitle">AI-Powered IT Service Management (ITSM) Workflow Solution</div>
+          <p class="project-link">
+            <strong>GitHub:</strong>
+            <a href="https://github.com/vtmahee/ResolveAI" target="_blank" rel="noopener noreferrer">github.com/vtmahee/ResolveAI</a>
+          </p>
+          <ul>
+            <li>Designed and conceptualized an AI-driven platform to transform fragmented service desk inputs, including voice transcripts, chat logs, and screenshots, into structured, ITIL-aligned incident documentation.</li>
+            <li>Built a functional React-based UI prototype featuring multimodal ingestion, real-time transcription display, OCR extraction, and structured ticket outputs.</li>
+            <li>Implemented ITIL v4-aligned documentation logic, including incident categorization, symptom analysis, troubleshooting logs, and resolution tracking.</li>
+            <li>Architected a hybrid knowledge retrieval system integrating internal knowledge bases with controlled external web sources, ensuring source attribution and trust scoring.</li>
+            <li>Integrated enterprise security and compliance considerations, including PII/PHI redaction, ISO 27001 alignment, SOC 2 readiness, and NIST AI Risk Management principles.</li>
+            <li>Designed integration workflows for major ticketing systems, including ServiceNow, Jira Service Management, Zendesk, Freshservice, and Zoho Desk.</li>
+          </ul>
+        </div>
+
+        <div class="project-block">
+          <div class="project-title">Home Lab Network Hardening &amp; Zero-Trust Architecture</div>
+          <div class="project-subtitle">Enterprise-Grade Perimeter Security &amp; Network Segmentation</div>
+          <ul>
+            <li>Designed and implemented a multi-layer security architecture utilizing pfSense and Proxmox VE to move from a flat network to a high-security, segmented environment.</li>
+            <li>Architected a Zero-Trust network model by implementing 802.1Q VLAN tagging, isolating critical management interfaces, IoT devices, and public-facing services into restricted security zones.</li>
+            <li>Deployed and tuned Suricata (IDS/IPS) for real-time traffic analysis and threat prevention, utilizing automated rule-set updates to mitigate emerging network vulnerabilities.</li>
+            <li>Established secure remote access infrastructure via WireGuard/OpenVPN, eliminating the need for external port forwarding and reducing the global attack surface.</li>
+            <li>Configured advanced firewall policies and inter-VLAN routing rules to enforce the principle of least privilege (PoLP) across all virtualized workloads and physical endpoints.</li>
+            <li>Integrated host-level security controls within Proxmox using local firewalls and automated logging to monitor and alert on unauthorized access attempts or lateral movement.</li>
+          </ul>
+        </div>
       </section>
     </main>
   </div>
