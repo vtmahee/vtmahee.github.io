@@ -12,67 +12,89 @@
       box-sizing: border-box;
     }
 
-    body {
+    :root {
+      --sidebar-bg: #08354a;
+      --sidebar-text: #f3f4f6;
+      --sidebar-muted: #dbeafe;
+      --accent: #1f6f8b;
+      --accent-dark: #0f4f67;
+      --page-bg: #d8edf6;
+      --content-bg: #ffffff;
+      --text: #1f2937;
+      --muted: #4b5563;
+      --soft: #6b7280;
+      --border: rgba(255, 255, 255, 0.15);
+      --button-dark: #0d4e65;
+      --button-light: #edf8fc;
+    }
+
+    html, body {
       margin: 0;
+      padding: 0;
+      min-height: 100%;
       font-family: 'Poppins', sans-serif;
-      background: #d8edf6;
-      color: #1f2937;
+      background: var(--page-bg);
+      color: var(--text);
+    }
+
+    body {
+      width: 100%;
     }
 
     .page {
-      max-width: 1100px;
-      margin: 30px auto;
-      background: #ffffff;
-      display: grid;
-      grid-template-columns: 320px 1fr;
+      width: 100%;
       min-height: 100vh;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      background: var(--content-bg);
     }
 
     .sidebar {
-      background: #08354a;
+      background: var(--sidebar-bg);
       color: white;
-      padding: 40px 35px;
+      padding: 40px 34px;
     }
 
     .photo-wrap {
       display: flex;
       justify-content: center;
-      margin: 0 auto 25px;
+      margin: 0 auto 24px;
     }
 
     .photo {
-      width: 180px;
-      height: 180px;
+      width: 190px;
+      height: 190px;
       border-radius: 50%;
       object-fit: cover;
       display: block;
       border: 4px solid rgba(255, 255, 255, 0.18);
       background: #e5e7eb;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
     }
 
     .name {
       text-align: center;
       font-size: 2rem;
       font-weight: 700;
-      line-height: 1.2;
+      line-height: 1.15;
       text-transform: uppercase;
       margin-bottom: 8px;
+      letter-spacing: 0.03em;
     }
 
     .role {
       text-align: center;
-      font-size: 1.05rem;
-      color: #dbeafe;
-      margin-bottom: 28px;
+      font-size: 1rem;
+      color: var(--sidebar-muted);
+      margin-bottom: 26px;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.12em;
     }
 
     .sidebar hr {
       border: none;
-      border-top: 1px solid rgba(255,255,255,0.15);
-      margin: 25px 0;
+      border-top: 1px solid var(--border);
+      margin: 24px 0;
     }
 
     .sidebar-section {
@@ -80,73 +102,187 @@
     }
 
     .sidebar-section h2 {
-      font-size: 1.35rem;
-      margin-bottom: 16px;
+      font-size: 1.1rem;
+      margin: 0 0 16px;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.12em;
+      color: white;
     }
 
     .sidebar-section p,
     .sidebar-section li,
-    .sidebar-section a {
-      font-size: 0.98rem;
+    .sidebar-section a,
+    .contact-line {
+      font-size: 0.96rem;
       line-height: 1.7;
-      color: #f3f4f6;
+      color: var(--sidebar-text);
       text-decoration: none;
     }
 
-    .sidebar-section ul {
+    .sidebar-section a:hover,
+    .contact-line a:hover {
+      text-decoration: underline;
+    }
+
+    .sidebar-list {
+      list-style: disc;
       padding-left: 18px;
       margin: 0;
     }
 
-    .sidebar-section li {
+    .sidebar-list li {
+      margin-bottom: 8px;
+    }
+
+    .contact-line {
       margin-bottom: 10px;
+      word-break: break-word;
+    }
+
+    .action-stack {
+      display: grid;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .sidebar-button {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      padding: 12px 14px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    .sidebar-button:hover {
+      transform: translateY(-1px);
+      opacity: 0.95;
+      text-decoration: none;
+    }
+
+    .sidebar-button.primary {
+      background: white;
+      color: var(--button-dark);
+    }
+
+    .sidebar-button.secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .education-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .edu-logo {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      border-radius: 8px;
+      background: white;
+      padding: 4px;
+      flex-shrink: 0;
+    }
+
+    .education-item strong {
+      display: block;
+      margin-bottom: 3px;
+      color: white;
+    }
+
+    .education-item .edu-meta {
+      color: var(--sidebar-muted);
+      font-size: 0.9rem;
+      margin-top: 4px;
     }
 
     .content {
-      padding: 45px 40px;
-      background: #ffffff;
+      padding: 52px 60px;
+      background: var(--content-bg);
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 28px;
+      margin-bottom: 40px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid #e5eef2;
+    }
+
+    .hero-copy {
+      max-width: 900px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: 2.35rem;
+      color: #0f2f42;
+      line-height: 1.15;
+    }
+
+    .hero p {
+      margin: 0;
     }
 
     .content-section {
-      margin-bottom: 40px;
+      margin-bottom: 42px;
     }
 
     .content-section h2 {
-      font-size: 2rem;
-      color: #08354a;
+      font-size: 1.9rem;
+      color: var(--accent-dark);
       text-transform: uppercase;
       margin: 0 0 18px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.05em;
     }
 
     .summary-text {
-      font-size: 1.02rem;
+      font-size: 1.03rem;
       line-height: 1.9;
-      color: #4b5563;
+      color: var(--muted);
+      max-width: 1050px;
     }
 
     .job {
       display: grid;
-      grid-template-columns: 170px 1fr;
+      grid-template-columns: 180px 1fr;
       gap: 24px;
-      margin-bottom: 28px;
+      margin-bottom: 30px;
+      align-items: start;
     }
 
     .job-left {
-      color: #6b7280;
+      color: var(--soft);
       font-size: 0.92rem;
       font-weight: 600;
       text-transform: uppercase;
       line-height: 1.7;
+      letter-spacing: 0.03em;
     }
 
     .job-right h3 {
-      margin: 0 0 8px;
-      color: #1f6f8b;
-      font-size: 1.2rem;
+      margin: 0 0 6px;
+      color: var(--accent);
+      font-size: 1.18rem;
       text-transform: uppercase;
+      letter-spacing: 0.03em;
     }
 
     .job-right h4 {
@@ -163,15 +299,15 @@
 
     .job-right li {
       margin-bottom: 9px;
-      line-height: 1.75;
-      color: #4b5563;
+      line-height: 1.8;
+      color: var(--muted);
     }
 
     .project-title {
-      font-size: 1.2rem;
+      font-size: 1.18rem;
       font-weight: 700;
-      color: #1f6f8b;
-      margin-bottom: 8px;
+      color: var(--accent);
+      margin-bottom: 6px;
     }
 
     .project-subtitle {
@@ -188,18 +324,51 @@
 
     .content-section li {
       margin-bottom: 10px;
-      line-height: 1.75;
-      color: #4b5563;
+      line-height: 1.8;
+      color: var(--muted);
     }
 
-    .contact-line {
-      margin-bottom: 10px;
-      word-break: break-word;
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(220px, 1fr));
+      gap: 14px 30px;
     }
 
-    @media (max-width: 900px) {
+    .skill-card {
+      background: #f7fbfd;
+      border: 1px solid #e3edf1;
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+
+    .skill-card h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      color: var(--accent-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .skill-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 0.98rem;
+    }
+
+    @media (max-width: 1100px) {
+      .content {
+        padding: 40px 36px;
+      }
+    }
+
+    @media (max-width: 940px) {
       .page {
         grid-template-columns: 1fr;
+      }
+
+      .hero {
+        flex-direction: column;
       }
 
       .job {
@@ -213,8 +382,16 @@
       }
 
       .photo {
-        width: 150px;
-        height: 150px;
+        width: 155px;
+        height: 155px;
+      }
+
+      .skill-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
       }
     }
   </style>
@@ -229,25 +406,57 @@
       <div class="name">Vincent T. Mahee</div>
       <div class="role">IT Support Professional</div>
 
+      <div class="action-stack">
+        <a href="Mahee_Resume_2026.pdf" download class="sidebar-button primary">Download PDF Resume</a>
+        <a href="https://www.linkedin.com/in/vtmahee/" target="_blank" rel="noopener noreferrer" class="sidebar-button secondary">View LinkedIn</a>
+      </div>
+
       <hr>
 
       <div class="sidebar-section">
         <h2>Contact Info</h2>
-        <div class="contact-line">vincent.t.mahee@gmail.com</div>
-        <div class="contact-line">443-758-3485</div>
+        <div class="contact-line">
+          <a href="mailto:vincent.t.mahee@gmail.com">vincent.t.mahee@gmail.com</a>
+        </div>
+        <div class="contact-line">
+          <a href="tel:14437583485">443-758-3485</a>
+        </div>
         <div class="contact-line">Pikesville, MD 21208</div>
-        <div class="contact-line"><a href="https://vtmahee.github.io">vtmahee.github.io</a></div>
+        <div class="contact-line">
+          <a href="https://vtmahee.github.io" target="_blank" rel="noopener noreferrer">vtmahee.github.io</a>
+        </div>
+        <div class="contact-line">
+          <a href="https://www.linkedin.com/in/vtmahee/" target="_blank" rel="noopener noreferrer">linkedin.com/in/vtmahee</a>
+        </div>
       </div>
 
       <div class="sidebar-section">
         <h2>Education</h2>
-        <p><strong>Johns Hopkins University</strong><br>Master of Science in Artificial Intelligence<br>Planned / Applicant</p>
-        <p><strong>University of Maryland University College</strong><br>Bachelor of Science in Computer and Information Science<br>2015</p>
+
+        <div class="education-item">
+          <img src="johns-hopkins-logo.png" alt="Johns Hopkins University logo" class="edu-logo">
+          <div>
+            <strong>Johns Hopkins University</strong>
+            Master of Science in Artificial Intelligence<br>
+            <span class="edu-meta">Planned / Applicant</span><br>
+            Intended Areas of Study: Machine Learning, Deep Learning, Natural Language Processing, Computer Vision, AI Ethics
+          </div>
+        </div>
+
+        <div class="education-item">
+          <img src="umuc-logo.png" alt="University of Maryland University College logo" class="edu-logo">
+          <div>
+            <strong>University of Maryland University College</strong>
+            Bachelor of Science in Computer and Information Science<br>
+            <span class="edu-meta">2015</span><br>
+            Relevant Coursework: Foundations of Oral Communication, Data Structures and Analysis, Capstone in Computer Science
+          </div>
+        </div>
       </div>
 
       <div class="sidebar-section">
         <h2>Skills</h2>
-        <ul>
+        <ul class="sidebar-list">
           <li>Active Directory</li>
           <li>Office 365</li>
           <li>Azure</li>
@@ -264,7 +473,7 @@
       </div>
 
       <div class="sidebar-section">
-        <h2>Languages</h2>
+        <h2>Programming Languages</h2>
         <p>C/C++, Java, MySQL, Python</p>
       </div>
 
@@ -275,17 +484,22 @@
     </aside>
 
     <main class="content">
-      <section class="content-section">
-        <h2>Profile</h2>
-        <p class="summary-text">
-          IT support professional with experience in high-volume service desk operations, enterprise troubleshooting,
-          accessibility support, cloud technologies, and IT service workflow improvement. Proven success supporting users,
-          resolving technical issues, documenting incidents, and improving service efficiency across enterprise and federal environments.
-        </p>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Resume Website</p>
+          <h1>Vincent T. Mahee</h1>
+          <p class="summary-text">
+            IT support professional with proven experience in high-volume service desk operations, enterprise troubleshooting,
+            user support, accessibility compliance, and IT service workflow improvement. Known for strong first-call resolution,
+            clear incident documentation, SLA-focused execution, and the ability to support end users across Microsoft, network,
+            and enterprise environments. Also experienced in designing AI-driven workflow concepts that improve service desk
+            efficiency, documentation quality, and knowledge retrieval.
+          </p>
+        </div>
       </section>
 
       <section class="content-section">
-        <h2>Experience</h2>
+        <h2>Professional Experience</h2>
 
         <div class="job">
           <div class="job-left">
@@ -352,7 +566,7 @@
       </section>
 
       <section class="content-section">
-        <h2>Project</h2>
+        <h2>Projects</h2>
         <div class="project-title">ResolveAI – Multimodal Case Intelligence &amp; Documentation Engine</div>
         <div class="project-subtitle">AI-Powered IT Service Management (ITSM) Workflow Solution</div>
         <ul>
@@ -363,6 +577,28 @@
           <li>Integrated enterprise security and compliance considerations, including PII/PHI redaction, ISO 27001 alignment, SOC 2 readiness, and NIST AI Risk Management principles.</li>
           <li>Designed integration workflows for major ticketing systems, including ServiceNow, Jira Service Management, Zendesk, Freshservice, and Zoho Desk.</li>
         </ul>
+      </section>
+
+      <section class="content-section">
+        <h2>Technical Snapshot</h2>
+        <div class="skill-grid">
+          <div class="skill-card">
+            <h3>Core Support</h3>
+            <p>Help desk operations, troubleshooting, incident management, end-user support, documentation, SLA compliance, remote support</p>
+          </div>
+          <div class="skill-card">
+            <h3>Infrastructure</h3>
+            <p>Active Directory, Office 365, VPN support, networking, Azure, Linux, virtualization, file shares</p>
+          </div>
+          <div class="skill-card">
+            <h3>Accessibility & Compliance</h3>
+            <p>Section 504/508 support, assistive technologies, privacy and data protection, information security awareness</p>
+          </div>
+          <div class="skill-card">
+            <h3>Tools</h3>
+            <p>ServiceNow, Jira Service Desk, Zendesk, HP Service Manager (CAPRS), Adobe Connect, SQL, MySQL</p>
+          </div>
+        </div>
       </section>
 
       <section class="content-section">
