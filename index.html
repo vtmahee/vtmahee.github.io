@@ -173,68 +173,48 @@
       border: 1px solid rgba(255, 255, 255, 0.14);
     }
 
-    .education-item {
+    .education-entry {
+      margin-bottom: 24px;
+    }
+
+    .education-header {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       gap: 16px;
-      margin-bottom: 22px;
+      margin-bottom: 10px;
     }
 
     .edu-logo {
       width: 72px;
       height: 72px;
       object-fit: contain;
-      border-radius: 8px;
       background: transparent;
       padding: 0;
       flex-shrink: 0;
     }
 
-    .education-item strong {
-      display: block;
-      margin-bottom: 3px;
+    .edu-school {
+      font-weight: 700;
       color: white;
+      line-height: 1.4;
+      font-size: 1rem;
     }
 
-    .education-item .edu-meta {
+    .education-details {
+      width: 100%;
+      color: var(--sidebar-text);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    .education-details .edu-meta {
       color: var(--sidebar-muted);
       font-size: 0.9rem;
-      margin-top: 4px;
     }
 
     .content {
       padding: 52px 60px;
       background: var(--content-bg);
-    }
-
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 28px;
-      margin-bottom: 40px;
-      padding-bottom: 28px;
-      border-bottom: 1px solid #e5eef2;
-    }
-
-    .hero-copy {
-      max-width: 950px;
-    }
-
-    .eyebrow {
-      margin: 0 0 10px;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 0.88rem;
-      font-weight: 600;
-    }
-
-    .hero h1 {
-      margin: 0 0 12px;
-      font-size: 2.35rem;
-      color: #0f2f42;
-      line-height: 1.15;
     }
 
     .content-section {
@@ -372,12 +352,13 @@
         height: 155px;
       }
 
-      .skill-grid {
-        grid-template-columns: 1fr;
+      .edu-logo {
+        width: 64px;
+        height: 64px;
       }
 
-      .hero h1 {
-        font-size: 2rem;
+      .skill-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -402,7 +383,7 @@
       <div class="sidebar-section">
         <h2>Contact Info</h2>
         <div class="contact-line">
-          <a href="mailto:vtmahee@zohomail.com">vtmahee@zohomail.com</a>
+          <a href="mailto:vincent.t.mahee@gmail.com">vincent.t.mahee@gmail.com</a>
         </div>
         <div class="contact-line">
           <a href="tel:14437583485">443-758-3485</a>
@@ -419,20 +400,24 @@
       <div class="sidebar-section">
         <h2>Education</h2>
 
-        <div class="education-item">
-          <img src="johns-hopkins-logo.png" alt="Johns Hopkins University logo" class="edu-logo">
-          <div>
-            <strong>Johns Hopkins University</strong>
+        <div class="education-entry">
+          <div class="education-header">
+            <img src="johns-hopkins-logo.png" alt="Johns Hopkins University logo" class="edu-logo">
+            <div class="edu-school">Johns Hopkins University</div>
+          </div>
+          <div class="education-details">
             Master of Science in Artificial Intelligence<br>
             <span class="edu-meta">Planned / Applicant</span><br>
             Intended Areas of Study: Machine Learning, Deep Learning, Natural Language Processing, Computer Vision, AI Ethics
           </div>
         </div>
 
-        <div class="education-item">
-          <img src="umuc-logo.png" alt="University of Maryland Global Campus logo" class="edu-logo">
-          <div>
-            <strong>University of Maryland University College</strong>
+        <div class="education-entry">
+          <div class="education-header">
+            <img src="umuc-logo.png" alt="University of Maryland University College logo" class="edu-logo">
+            <div class="edu-school">University of Maryland University College</div>
+          </div>
+          <div class="education-details">
             Bachelor of Science in Computer and Information Science<br>
             <span class="edu-meta">2015</span><br>
             Relevant Coursework: Foundations of Oral Communication, Data Structures and Analysis, Capstone in Computer Science
@@ -470,18 +455,15 @@
     </aside>
 
     <main class="content">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Resume Website</p>
-          <h1>Vincent T. Mahee</h1>
-          <p class="summary-text">
-            IT support professional with proven experience in high-volume service desk operations, enterprise troubleshooting,
-            end-user support, accessibility compliance, and IT service workflow improvement. Known for strong first-call resolution,
-            clear incident documentation, SLA-focused execution, and the ability to support users across Microsoft, network,
-            and enterprise environments. Also experienced in designing AI-driven workflow concepts that improve service desk
-            efficiency, documentation quality, and knowledge retrieval.
-          </p>
-        </div>
+      <section class="content-section">
+        <h2>Summary</h2>
+        <p class="summary-text">
+          IT support professional with proven experience in high-volume service desk operations, enterprise troubleshooting,
+          end-user support, accessibility compliance, and IT service workflow improvement. Known for strong first-call resolution,
+          clear incident documentation, SLA-focused execution, and the ability to support users across Microsoft, network,
+          and enterprise environments. Also experienced in designing AI-driven workflow concepts that improve service desk
+          efficiency, documentation quality, and knowledge retrieval.
+        </p>
       </section>
 
       <section class="content-section">
