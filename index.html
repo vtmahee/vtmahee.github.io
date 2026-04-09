@@ -265,24 +265,12 @@
 
     .job-org-logo {
       margin-top: 10px;
+      width: 120px;
       max-width: 100%;
       height: auto;
-      max-height: 90px;
       object-fit: contain;
       display: block;
       background: transparent;
-    }
-
-    .job-org-logo.fm {
-      width: 165px;
-    }
-
-    .job-org-logo.oracle {
-      width: 150px;
-    }
-
-    .job-org-logo.yorktel {
-      width: 145px;
     }
 
     .job-right h3 {
@@ -415,16 +403,8 @@
         height: 64px;
       }
 
-      .job-org-logo.fm {
-        width: 120px;
-      }
-
-      .job-org-logo.oracle {
-        width: 110px;
-      }
-
-      .job-org-logo.yorktel {
-        width: 105px;
+      .job-org-logo {
+        width: 100px;
       }
 
       .skill-grid {
@@ -437,7 +417,7 @@
   <div class="page">
     <aside class="sidebar">
       <div class="photo-wrap">
-        <img src="ProfilePic.jpeg" alt="Vincent T. Mahee profile photo" class="photo">
+        <img src="profile_picture.jpeg" alt="Vincent T. Mahee profile photo" class="photo">
       </div>
 
       <div class="name">Vincent T. Mahee</div>
@@ -543,7 +523,7 @@
           <div class="job-left">
             2024 – Present<br>
             <span class="job-company">FM Global</span>
-            <img src="oracle-logo.png" alt="Oracle logo" class="job-org-logo oracle">
+            <img src="fm-logo.png" alt="FM Global logo" class="job-org-logo">
           </div>
           <div class="job-right">
             <h3>Service Desk Technician</h3>
@@ -561,7 +541,7 @@
           <div class="job-left">
             2016 – 2024<br>
             <span class="job-company">Yorktel</span>
-            <img src="yorktel-logo.png" alt="Yorktel logo" class="job-org-logo yorktel">
+            <img src="yorktel-logo.png" alt="Yorktel logo" class="job-org-logo">
           </div>
           <div class="job-right">
             <h3>SSA Support Engineer</h3>
@@ -579,7 +559,7 @@
           <div class="job-left">
             2013 – 2016<br>
             <span class="job-company">Oracle</span>
-            <img src="fm-logo.png" alt="FM logo" class="job-org-logo fm">
+            <img src="oracle-logo.png" alt="Oracle logo" class="job-org-logo">
           </div>
           <div class="job-right">
             <h3>Solution Analyst</h3>
@@ -594,7 +574,6 @@
           <div class="job-left">
             2012 – 2013<br>
             <span class="job-company">Oracle</span>
-            <img src="fm-logo.png" alt="FM logo" class="job-org-logo fm">
           </div>
           <div class="job-right">
             <h3>Customer Support Analyst</h3>
@@ -659,15 +638,19 @@
         </div>
 
         <div class="project-block">
-          <div class="project-title">Home Lab Network Hardening &amp; Zero-Trust Architecture</div>
-          <div class="project-subtitle">Enterprise-Grade Perimeter Security &amp; Network Segmentation</div>
+          <div class="project-title">Home Network Security – Zero Trust Lab Architecture</div>
+          <div class="project-subtitle">Segmented Home Lab Security Design with pfSense and Proxmox VE</div>
+          <p class="project-link">
+            <strong>GitHub:</strong>
+            <a href="https://github.com/vtmahee/Home_Network_Security" target="_blank" rel="noopener noreferrer">github.com/vtmahee/Home_Network_Security</a>
+          </p>
           <ul>
-            <li>Designed and implemented a multi-layer security architecture utilizing pfSense and Proxmox VE to move from a flat network to a high-security, segmented environment.</li>
-            <li>Architected a Zero-Trust network model by implementing 802.1Q VLAN tagging, isolating critical management interfaces, IoT devices, and public-facing services into restricted security zones.</li>
-            <li>Deployed and tuned Suricata (IDS/IPS) for real-time traffic analysis and threat prevention, utilizing automated rule-set updates to mitigate emerging network vulnerabilities.</li>
-            <li>Established secure remote access infrastructure via WireGuard/OpenVPN, eliminating the need for external port forwarding and reducing the global attack surface.</li>
-            <li>Configured advanced firewall policies and inter-VLAN routing rules to enforce the principle of least privilege (PoLP) across all virtualized workloads and physical endpoints.</li>
-            <li>Integrated host-level security controls within Proxmox using local firewalls and automated logging to monitor and alert on unauthorized access attempts or lateral movement.</li>
+            <li>Designed and implemented a segmented home lab environment using pfSense and Proxmox VE to apply Zero Trust principles and layered defense.</li>
+            <li>Eliminated flat network architecture by separating management, trusted client, and higher-risk device traffic into dedicated VLAN security zones.</li>
+            <li>Configured firewall enforcement and least-privilege inter-VLAN policies to reduce lateral movement opportunities.</li>
+            <li>Integrated IDS/IPS monitoring with Suricata to improve network visibility and strengthen detection capabilities.</li>
+            <li>Built secure remote access workflows without exposing sensitive internal management services directly to the internet.</li>
+            <li>Demonstrated practical enterprise-style network security engineering in a personal lab environment.</li>
           </ul>
         </div>
       </section>
