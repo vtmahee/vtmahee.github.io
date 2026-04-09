@@ -143,13 +143,16 @@
       padding-left: 0;
       margin: 0;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px 18px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px 10px;
     }
 
     .sidebar-list li {
       margin-bottom: 0;
       color: var(--sidebar-text);
+      font-size: 0.72rem;
+      white-space: nowrap;
+      letter-spacing: -0.01em;
     }
 
     .contact-line {
@@ -297,20 +300,6 @@
     .job-company {
       display: block;
       color: var(--text-soft);
-    }
-
-    .job-org-logo {
-      margin-top: 10px;
-      width: 120px;
-      max-width: 100%;
-      height: auto;
-      object-fit: contain;
-      display: block;
-      background: transparent;
-    }
-
-    .job-org-logo.fm-logo {
-      width: 90px;
     }
 
     .job-right h3 {
@@ -462,20 +451,17 @@
         height: 64px;
       }
 
-      .job-org-logo {
-        width: 100px;
-      }
-
-      .job-org-logo.fm-logo {
-        width: 75px;
-      }
-
       .skill-grid {
         grid-template-columns: 1fr;
       }
 
       .sidebar-list {
         grid-template-columns: 1fr;
+      }
+
+      .sidebar-list li {
+        font-size: 0.9rem;
+        white-space: normal;
       }
     }
   </style>
@@ -545,17 +531,18 @@
       <div class="sidebar-section">
         <h2>Skills</h2>
         <ul class="sidebar-list">
-          <li>Active Directory</li>
-          <li>Office 365</li>
-          <li>Azure</li>
-          <li>Networking</li>
-          <li>VPN Support</li>
-          <li>Adobe Connect</li>
-          <li>Linux/Unix</li>
-          <li>SQL</li>
+          <li>Generative AI &amp; LLM</li>
           <li>Cybersecurity</li>
+          <li>Azure</li>
+          <li>Office 365</li>
+          <li>Active Directory</li>
+          <li>Networking</li>
           <li>Remote Support</li>
+          <li>VPN Support</li>
           <li>Virtualization</li>
+          <li>Linux / Unix</li>
+          <li>SQL</li>
+          <li>Adobe</li>
         </ul>
       </div>
 
@@ -589,7 +576,6 @@
           <div class="job-left">
             2024 – Present<br>
             <span class="job-company">FM Global</span>
-            <img src="fm-logo.png" alt="FM Global logo" class="job-org-logo fm-logo">
           </div>
           <div class="job-right">
             <h3>Service Desk Technician</h3>
@@ -607,7 +593,6 @@
           <div class="job-left">
             2016 – 2024<br>
             <span class="job-company">Yorktel</span>
-            <img src="yorktel-logo.png" alt="Yorktel logo" class="job-org-logo">
           </div>
           <div class="job-right">
             <h3>SSA Support Engineer</h3>
@@ -625,7 +610,6 @@
           <div class="job-left">
             2013 – 2016<br>
             <span class="job-company">Oracle</span>
-            <img src="oracle-logo.png" alt="Oracle logo" class="job-org-logo">
           </div>
           <div class="job-right">
             <h3>Solution Analyst</h3>
@@ -661,7 +645,7 @@
           </div>
           <div class="skill-card">
             <h3>Infrastructure</h3>
-            <p>Active Directory, Office 365, VPN support, networking, Azure, Linux/Unix, virtualization, file shares</p>
+            <p>Active Directory, Office 365, VPN support, networking, Azure, Linux / Unix, virtualization, file shares</p>
           </div>
           <div class="skill-card">
             <h3>Accessibility &amp; Compliance</h3>
@@ -669,7 +653,7 @@
           </div>
           <div class="skill-card">
             <h3>Tools</h3>
-            <p>ServiceNow, Jira Service Desk, Zendesk, HP Service Manager (CAPRS), Adobe Connect, SQL, MySQL</p>
+            <p>ServiceNow, Jira Service Desk, Zendesk, HP Service Manager (CAPRS), Adobe, SQL, MySQL</p>
           </div>
         </div>
       </section>
