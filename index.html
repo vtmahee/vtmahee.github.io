@@ -38,21 +38,28 @@
 
     body {
       width: 100%;
+      padding: 24px;
     }
 
     .page {
       width: 100%;
-      min-height: 100vh;
+      min-height: calc(100vh - 48px);
       display: grid;
       grid-template-columns: 360px 1fr;
-      background: var(--content-bg);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+      gap: 24px;
+      background: transparent;
+      box-shadow: none;
+      align-items: start;
     }
 
     .sidebar {
       background: var(--sidebar-bg);
       color: white;
       padding: 40px 34px;
+      border-radius: 24px;
+      box-shadow: 0 18px 40px rgba(8, 53, 74, 0.28);
+      position: sticky;
+      top: 24px;
     }
 
     .photo-wrap {
@@ -217,6 +224,9 @@
     .content {
       padding: 52px 60px;
       background: var(--content-bg);
+      border-radius: 24px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+      min-height: calc(100vh - 48px);
     }
 
     .content-section {
@@ -271,6 +281,10 @@
       object-fit: contain;
       display: block;
       background: transparent;
+    }
+
+    .job-org-logo.fm-logo {
+      width: 90px;
     }
 
     .job-right h3 {
@@ -373,8 +387,18 @@
     }
 
     @media (max-width: 940px) {
+      body {
+        padding: 16px;
+      }
+
       .page {
         grid-template-columns: 1fr;
+        min-height: auto;
+        gap: 16px;
+      }
+
+      .sidebar {
+        position: static;
       }
 
       .job {
@@ -405,6 +429,10 @@
 
       .job-org-logo {
         width: 100px;
+      }
+
+      .job-org-logo.fm-logo {
+        width: 75px;
       }
 
       .skill-grid {
@@ -523,7 +551,7 @@
           <div class="job-left">
             2024 – Present<br>
             <span class="job-company">FM Global</span>
-            <img src="fm-logo.png" alt="FM Global logo" class="job-org-logo">
+            <img src="fm-logo.png" alt="FM Global logo" class="job-org-logo fm-logo">
           </div>
           <div class="job-right">
             <h3>Service Desk Technician</h3>
@@ -598,7 +626,7 @@
             <p>Active Directory, Office 365, VPN support, networking, Azure, Linux, virtualization, file shares</p>
           </div>
           <div class="skill-card">
-            <h3>Accessibility & Compliance</h3>
+            <h3>Accessibility &amp; Compliance</h3>
             <p>Section 504/508 support, assistive technologies, privacy and data protection, information security awareness</p>
           </div>
           <div class="skill-card">
@@ -609,7 +637,7 @@
       </section>
 
       <section class="content-section">
-        <h2>Training & Certification</h2>
+        <h2>Training &amp; Certification</h2>
         <ul>
           <li>Federal Agency Training – Privacy and data protection, information security, accessibility, and Section 504/508 compliance.</li>
           <li>University/Employee Training – MySQL, Java, Oracle Database, Cloud Applications, Solaris 11.</li>
@@ -638,11 +666,11 @@
         </div>
 
         <div class="project-block">
-          <div class="project-title">Home Network Security – Zero Trust Lab Architecture</div>
+          <div class="project-title">Home Lab Cybersecurity - Zero Trust Network Architecture</div>
           <div class="project-subtitle">Segmented Home Lab Security Design with pfSense and Proxmox VE</div>
           <p class="project-link">
             <strong>GitHub:</strong>
-            <a href="https://github.com/vtmahee/Home_Network_Security" target="_blank" rel="noopener noreferrer">github.com/vtmahee/Home_Network_Security</a>
+            <a href="https://github.com/vtmahee/homelab-zero-trust-security" target="_blank" rel="noopener noreferrer">github.com/vtmahee/homelab-zero-trust-security</a>
           </p>
           <ul>
             <li>Designed and implemented a segmented home lab environment using pfSense and Proxmox VE to apply Zero Trust principles and layered defense.</li>
