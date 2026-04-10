@@ -16,8 +16,8 @@
     :root {
       --bg: #0b1120;
       --sidebar: rgba(17, 24, 39, 0.94);
-      --card: rgba(24, 34, 53, 0.55);
-      --card-2: rgba(30, 41, 59, 0.55);
+      --card: rgba(24, 34, 53, 0.30);
+      --card-2: rgba(30, 41, 59, 0.28);
       --text: #ffffff;
       --text-soft: #e2e8f0;
       --text-muted: #94a3b8;
@@ -47,7 +47,7 @@
       min-height: 100vh;
       background-color: #0b1120;
       background-image:
-        linear-gradient(rgba(11, 17, 32, 0.82), rgba(11, 17, 32, 0.88)),
+        linear-gradient(rgba(11, 17, 32, 0.72), rgba(11, 17, 32, 0.78)),
         url('vecteezy_abstract-technology-background-world-of-digital-technology_20674663.jpg');
       background-size: cover;
       background-position: left center;
@@ -74,7 +74,6 @@
       align-items: start;
     }
 
-    /* ── SIDEBAR ── stays fully opaque */
     .sidebar {
       position: sticky;
       top: 24px;
@@ -315,12 +314,11 @@
       gap: 22px;
     }
 
-    /* ── MAIN CARDS ── semi-transparent so background shows through */
     .card {
       position: relative;
-      background: rgba(24, 34, 53, 0.55);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      background: var(--card);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       border: 1px solid rgba(148, 163, 184, 0.22);
       border-radius: var(--radius-lg);
       padding: 30px 32px;
@@ -341,7 +339,7 @@
 
     .card:hover {
       transform: translateY(-4px);
-      background: rgba(24, 34, 53, 0.65);
+      background: rgba(24, 34, 53, 0.38);
       border-color: rgba(56, 189, 248, 0.26);
     }
 
@@ -427,13 +425,14 @@
       padding: 18px;
       border-radius: 16px;
       border: 1px solid var(--border);
-      background: rgba(30, 41, 59, 0.50);
-      transition: transform 0.2s ease, border-color 0.2s ease;
+      background: var(--card-2);
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     }
 
     .snapshot-item:hover {
       transform: translateY(-2px);
       border-color: rgba(56, 189, 248, 0.28);
+      background: rgba(30, 41, 59, 0.36);
     }
 
     .snapshot-item h3 {
@@ -460,14 +459,14 @@
       padding: 20px;
       border-radius: 18px;
       border: 1px solid var(--border);
-      background: rgba(30, 41, 59, 0.50);
+      background: var(--card-2);
       transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
     }
 
     .project-card:hover {
       transform: translateY(-3px);
       border-color: rgba(56, 189, 248, 0.3);
-      background: rgba(30, 41, 59, 0.65);
+      background: rgba(30, 41, 59, 0.36);
     }
 
     .project-name {
