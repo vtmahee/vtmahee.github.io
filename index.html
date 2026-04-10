@@ -310,6 +310,25 @@
       background: rgba(56, 189, 248, 0.08);
     }
 
+    .sidebar-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .sidebar-list li {
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      color: var(--text-soft);
+      font-size: 0.93rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
     .content {
       display: grid;
       gap: 22px;
@@ -637,6 +656,7 @@
 
       <section class="sidebar-section">
         <h2 class="section-label">Education</h2>
+
         <div class="edu-card">
           <div class="edu-top">
             <img src="johns-hopkins-logo.png" alt="Johns Hopkins University logo" class="edu-logo">
@@ -664,38 +684,39 @@
 
       <section class="sidebar-section">
         <h2 class="section-label">Skills</h2>
-        <div class="pill-wrap">
-          <span class="pill">Active Directory</span>
-          <span class="pill">Office 365</span>
-          <span class="pill">Azure</span>
-          <span class="pill">Networking</span>
-          <span class="pill">VPN Support</span>
-          <span class="pill">Adobe Connect</span>
-          <span class="pill">Linux/Unix</span>
-          <span class="pill">SQL</span>
-          <span class="pill">Cybersecurity</span>
-          <span class="pill">Remote Support</span>
-          <span class="pill">Virtualization</span>
-        </div>
+        <ul class="sidebar-list">
+          <li>Generative AI &amp; LLMs</li>
+          <li>Cybersecurity</li>
+          <li>Azure</li>
+          <li>Office 365</li>
+          <li>Active Directory</li>
+          <li>Networking</li>
+          <li>Remote Support</li>
+          <li>VPN Support</li>
+          <li>Virtualization</li>
+          <li>Linux/Unix</li>
+          <li>SQL</li>
+          <li>Adobe Connect</li>
+        </ul>
       </section>
 
       <section class="sidebar-section">
         <h2 class="section-label">Programming</h2>
         <div class="pill-wrap">
-          <span class="pill">C/C++</span>
-          <span class="pill">Java</span>
-          <span class="pill">MySQL</span>
           <span class="pill">Python</span>
+          <span class="pill">Java</span>
+          <span class="pill">C/C++</span>
+          <span class="pill">MySQL</span>
         </div>
       </section>
 
       <section class="sidebar-section">
         <h2 class="section-label">Ticketing Systems</h2>
         <div class="pill-wrap">
-          <span class="pill">HP Service Manager</span>
-          <span class="pill">Jira Service Desk</span>
           <span class="pill">ServiceNow</span>
+          <span class="pill">Jira Service Desk</span>
           <span class="pill">Zendesk</span>
+          <span class="pill">HP Service Manager</span>
         </div>
       </section>
     </aside>
@@ -787,19 +808,19 @@
         <div class="snapshot-grid">
           <div class="snapshot-item">
             <h3>Core Support</h3>
-            <p>Help desk operations, troubleshooting, incident management, end-user support, documentation, SLA compliance, remote support.</p>
+            <p>Help desk operations, troubleshooting, incident management, end-user support, documentation, SLA compliance, remote support</p>
           </div>
           <div class="snapshot-item">
             <h3>Infrastructure</h3>
-            <p>Active Directory, Office 365, VPN support, networking, Azure, Linux/Unix, virtualization, file shares.</p>
+            <p>Active Directory, Office 365, VPN support, networking, Azure, Linux / Unix, virtualization, file shares</p>
           </div>
           <div class="snapshot-item">
-            <h3>Accessibility &amp; Compliance</h3>
-            <p>Section 504/508 support, assistive technologies, privacy and data protection, information security awareness.</p>
+            <h3>Machine Learning</h3>
+            <p>Deep Learning, NLP, MLOps, Generative AI tools, Prompt Engineering, ChatGPT integration, LLM tuning, AI Ethics &amp; Governance, Data Fluency, AI Literacy</p>
           </div>
           <div class="snapshot-item">
             <h3>Tools</h3>
-            <p>ServiceNow, Jira Service Desk, Zendesk, HP Service Manager, Adobe Connect, SQL, MySQL.</p>
+            <p>ServiceNow, Jira Service Desk, Zendesk, HP Service Manager (CAPRS), Adobe Connect, SQL, MySQL</p>
           </div>
         </div>
       </section>
