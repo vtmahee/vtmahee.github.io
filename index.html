@@ -27,7 +27,6 @@
       --button-dark: #0f172a;
       --card-border: rgba(148, 163, 184, 0.18);
       --shadow-dark: rgba(0, 0, 0, 0.35);
-      --skill-card-bg: #0f172a;
       --skill-card-border: rgba(148, 163, 184, 0.2);
     }
 
@@ -44,7 +43,7 @@
       width: 100%;
       padding: 24px;
       background:
-        linear-gradient(rgba(11, 17, 32, 0.9), rgba(11, 17, 32, 0.92)),
+        linear-gradient(rgba(11, 17, 32, 0.88), rgba(11, 17, 32, 0.9)),
         url('generated_image_1775854590_0.png') center center / cover no-repeat fixed;
       color: #ffffff;
     }
@@ -58,17 +57,16 @@
       align-items: start;
     }
 
+    /* LEFT SIDEBAR - mostly solid */
     .sidebar {
-      background: rgba(17, 24, 39, 0.88);
+      background: #111827;
       color: var(--sidebar-text);
       padding: 42px 34px;
       border-radius: 24px;
       box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
       position: sticky;
       top: 24px;
-      border: 1px solid rgba(148, 163, 184, 0.22);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(148, 163, 184, 0.18);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -270,17 +268,18 @@
       gap: 24px;
     }
 
+    /* MAIN CONTENT - slightly transparent */
     .content-section {
       position: relative;
       overflow: hidden;
       margin: 0;
       padding: 34px 38px;
-      background: rgba(30, 41, 59, 0.88);
+      background: rgba(30, 41, 59, 0.82);
       border-radius: 24px;
       box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
       border: 1px solid rgba(148, 163, 184, 0.22);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -397,7 +396,7 @@
     .project-block {
       margin-bottom: 28px;
       padding: 20px 22px;
-      background: rgba(15, 23, 42, 0.55);
+      background: rgba(15, 23, 42, 0.52);
       border: 1px solid rgba(148, 163, 184, 0.16);
       border-radius: 16px;
       transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
@@ -431,7 +430,7 @@
     }
 
     .skill-card {
-      background: rgba(15, 23, 42, 0.7);
+      background: rgba(15, 23, 42, 0.5);
       border: 1px solid var(--skill-card-border);
       border-radius: 14px;
       padding: 16px 18px;
@@ -612,11 +611,7 @@
       <section class="content-section">
         <h2>Summary</h2>
         <p class="summary-text">
-          IT support professional with proven experience in high-volume service desk operations, enterprise troubleshooting,
-          end-user support, accessibility compliance, and IT service workflow improvement. Known for strong first-call resolution,
-          clear incident documentation, SLA-focused execution, and the ability to support users across Microsoft, network,
-          and enterprise environments. Also experienced in designing AI-driven workflow concepts that improve service desk
-          efficiency, documentation quality, and knowledge retrieval.
+          IT support professional with experience in enterprise troubleshooting, end-user support, service desk operations, and IT workflow improvement. Skilled in Microsoft environments, incident management, and SLA-focused support, with growing focus on AI workflows, machine learning, and generative AI tools.
         </p>
       </section>
 
