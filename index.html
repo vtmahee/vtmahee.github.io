@@ -33,8 +33,7 @@
       --max-width: 1480px;
     }
 
-    html,
-    body {
+    html, body {
       margin: 0;
       padding: 0;
       min-height: 100%;
@@ -45,9 +44,14 @@
 
     body {
       padding: 24px;
-      background:
-        linear-gradient(rgba(11, 17, 32, 0.84), rgba(11, 17, 32, 0.90)),
-        url('background.png') center center / cover no-repeat fixed;
+      background-color: #0b1120;
+      background-image:
+        linear-gradient(rgba(11, 17, 32, 0.82), rgba(11, 17, 32, 0.88)),
+        url('vecteezy_abstract-technology-background-world-of-digital-technology_20674663.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
     }
 
     a {
@@ -548,6 +552,7 @@
     @media (max-width: 760px) {
       body {
         padding: 14px;
+        background-attachment: scroll;
       }
 
       .sidebar,
@@ -586,13 +591,11 @@
         <div class="photo-frame">
           <img src="1761845729910.jpeg" alt="Vincent T. Mahee profile photo" class="photo">
         </div>
-
         <h1 class="name">Vincent T. Mahee</h1>
         <p class="title">IT Support Professional</p>
         <p class="tagline">
           Enterprise support, troubleshooting, accessibility compliance, and AI workflow design focused on business efficiency and productivity.
         </p>
-
         <div class="cta-group">
           <a href="Mahee_Resume_2026.pdf" download class="btn btn-primary">⬇ Download Resume PDF</a>
           <a href="https://www.linkedin.com/in/vtmahee/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View LinkedIn</a>
@@ -627,15 +630,12 @@
 
       <section class="sidebar-section">
         <h2 class="section-label">Education</h2>
-
         <div class="edu-card">
           <div class="edu-top">
             <img src="Hopkins-Logo.png" alt="Johns Hopkins University logo" class="edu-logo">
             <div class="edu-school">Johns Hopkins University</div>
           </div>
-          <div class="edu-degree">
-            Master of Science in Artificial Intelligence
-          </div>
+          <div class="edu-degree">Master of Science in Artificial Intelligence</div>
           <div class="edu-meta">
             Planned / Applicant<br>
             Intended Areas of Study: Machine Learning, Deep Learning, Natural Language Processing, Computer Vision, AI Ethics
@@ -647,9 +647,7 @@
             <img src="UMGC-logo.png" alt="University of Maryland Global Campus logo" class="edu-logo">
             <div class="edu-school">University of Maryland Global Campus</div>
           </div>
-          <div class="edu-degree">
-            Bachelor of Science in Computer and Information Science
-          </div>
+          <div class="edu-degree">Bachelor of Science in Computer and Information Science</div>
           <div class="edu-meta">
             Graduation Date: 2015<br>
             Relevant Coursework: Foundations of Oral Communication, Data Structures and Analysis, Capstone in Computer Science
@@ -709,8 +707,8 @@
 
       <section class="card">
         <h2 class="card-title">Professional Experience</h2>
-
         <div class="experience-list">
+
           <div class="job">
             <div class="job-meta">
               2024 – Present
@@ -767,12 +765,13 @@
             <div>
               <h3 class="job-role">Customer Support Analyst</h3>
               <ul>
-                <li>Provided technical and functional support to Oracle’s global customer base via phone and electronic channels.</li>
+                <li>Provided technical and functional support to Oracle's global customer base via phone and electronic channels.</li>
                 <li>Verified customer entitlement for support and collaborated with the Support Operations HOST team when entitlement required clarification.</li>
                 <li>Handled a broad range of product- and system-related service requests.</li>
               </ul>
             </div>
           </div>
+
         </div>
       </section>
 
@@ -809,16 +808,14 @@
 
       <section class="card">
         <h2 class="card-title">Projects</h2>
-
         <div class="project-grid">
+
           <article class="project-card">
             <h3 class="project-name">ResolveAI – Multimodal Case Intelligence &amp; Documentation Engine</h3>
             <p class="project-subtitle">AI-Powered IT Service Management Workflow Solution</p>
-
             <div class="project-actions">
               <a class="repo-link" href="https://github.com/vtmahee/ResolveAI" target="_blank" rel="noopener noreferrer">↗ GitHub Repository</a>
             </div>
-
             <div class="badge-row">
               <span class="badge">AI Workflow</span>
               <span class="badge">ITSM</span>
@@ -827,7 +824,6 @@
               <span class="badge">Knowledge Retrieval</span>
               <span class="badge">Security / Compliance</span>
             </div>
-
             <ul>
               <li>Designed and conceptualized an AI-driven platform to transform fragmented service desk inputs, including voice transcripts, chat logs, and screenshots, into structured, ITIL-aligned incident documentation.</li>
               <li>Built a functional React-based UI prototype featuring multimodal ingestion, real-time transcription display, OCR extraction, and structured ticket outputs.</li>
@@ -841,11 +837,9 @@
           <article class="project-card">
             <h3 class="project-name">Home Lab Cybersecurity - Zero Trust Network Architecture</h3>
             <p class="project-subtitle">Segmented Home Lab Security Design with pfSense and Proxmox VE</p>
-
             <div class="project-actions">
               <a class="repo-link" href="https://github.com/vtmahee/homelab-zero-trust-security" target="_blank" rel="noopener noreferrer">↗ GitHub Repository</a>
             </div>
-
             <div class="badge-row">
               <span class="badge">pfSense</span>
               <span class="badge">Proxmox VE</span>
@@ -854,7 +848,6 @@
               <span class="badge">Network Segmentation</span>
               <span class="badge">IDS/IPS</span>
             </div>
-
             <ul>
               <li>Designed and implemented a segmented home lab environment using pfSense and Proxmox VE to apply Zero Trust principles and layered defense.</li>
               <li>Eliminated flat network architecture by separating management, trusted client, and higher-risk device traffic into dedicated VLAN security zones.</li>
@@ -864,6 +857,7 @@
               <li>Demonstrated practical enterprise-style network security engineering in a personal lab environment.</li>
             </ul>
           </article>
+
         </div>
       </section>
 
