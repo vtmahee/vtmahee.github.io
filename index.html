@@ -316,21 +316,27 @@
       padding: 0;
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
+      gap: 6px 14px;
     }
 
     .sidebar-list li {
       display: flex;
       align-items: center;
-      min-height: 44px;
-      padding: 10px 12px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border);
+      gap: 8px;
+      padding: 4px 0;
       color: var(--text-soft);
       font-size: 0.9rem;
-      font-weight: 600;
-      line-height: 1.35;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .sidebar-list li::before {
+      content: "✓";
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      line-height: 1;
     }
 
     .content {
@@ -811,6 +817,15 @@
       </section>
 
       <section class="card">
+        <h2 class="card-title">Training &amp; Certification</h2>
+        <ul class="training-list">
+          <li>Federal agency training in privacy, information security, accessibility, and Section 504/508 compliance.</li>
+          <li>Professional training in MySQL, Java, Oracle Database, Cloud Applications, and Solaris 11.</li>
+          <li>CompTIA A+ Certification – May 2010.</li>
+        </ul>
+      </section>
+
+      <section class="card">
         <h2 class="card-title">Technical Snapshot</h2>
         <div class="snapshot-grid">
           <div class="snapshot-item">
@@ -830,15 +845,6 @@
             <p>ServiceNow, Jira Service Desk, Zendesk, HP Service Manager (CAPRS), Adobe Connect, SQL, MySQL</p>
           </div>
         </div>
-      </section>
-
-      <section class="card">
-        <h2 class="card-title">Training &amp; Certification</h2>
-        <ul class="training-list">
-          <li>Federal agency training in privacy, information security, accessibility, and Section 504/508 compliance.</li>
-          <li>Professional training in MySQL, Java, Oracle Database, Cloud Applications, and Solaris 11.</li>
-          <li>CompTIA A+ Certification – May 2010.</li>
-        </ul>
       </section>
 
       <section class="card">
