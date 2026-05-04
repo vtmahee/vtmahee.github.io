@@ -562,84 +562,22 @@
       margin-bottom: 8px;
     }
 
+    .training-sublist {
+      margin-top: 6px;
+      padding-left: 18px;
+      color: var(--text-soft);
+    }
+
+    .training-sublist li {
+      margin-bottom: 4px;
+      line-height: 1.6;
+    }
+
     .footer-note {
       text-align: center;
       color: var(--text-muted);
       font-size: 0.88rem;
       padding: 6px 0 0;
-    }
-
-    .cert-subsection {
-      margin-top: 26px;
-      padding-top: 22px;
-      border-top: 1px solid var(--border);
-    }
-
-    .cert-subsection-title {
-      margin: 0 0 14px;
-      font-size: 1rem;
-      font-weight: 800;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-    }
-
-    .cert-list {
-      display: grid;
-      gap: 10px;
-    }
-
-    .cert-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      padding: 13px 16px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-    }
-
-    .cert-item:hover {
-      transform: translateY(-2px);
-      border-color: rgba(56, 189, 248, 0.28);
-      background: rgba(56, 189, 248, 0.05);
-    }
-
-    .cert-name {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--text-soft);
-      line-height: 1.4;
-    }
-
-    .cert-file-link {
-      flex-shrink: 0;
-      font-size: 0.8rem;
-      font-weight: 800;
-      color: var(--accent);
-      text-decoration: none;
-      background: rgba(56, 189, 248, 0.1);
-      border: 1px solid rgba(56, 189, 248, 0.22);
-      padding: 6px 12px;
-      border-radius: 999px;
-      white-space: nowrap;
-      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
-    }
-
-    .cert-file-link:hover {
-      background: var(--accent);
-      color: #07111f;
-      transform: translateY(-1px);
-    }
-
-    @media (max-width: 560px) {
-      .cert-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
     }
 
     @media (max-width: 1100px) {
@@ -710,7 +648,7 @@
           Enterprise support professional with experience in troubleshooting, accessibility compliance, infrastructure support, and AI-driven productivity workflows.
         </p>
         <div class="cta-group">
-          <a href="Mahee_Resume_2026.pdf" download class="btn btn-primary">⬇ Download Resume PDF</a>
+          <a href="resume/Mahee_Resume_2026.pdf" download class="btn btn-primary">⬇ Download Resume PDF</a>
           <a href="https://www.linkedin.com/in/vtmahee/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View LinkedIn</a>
         </div>
       </div>
@@ -892,42 +830,22 @@
       <section class="card">
         <h2 class="card-title">Training &amp; Certification</h2>
         <ul class="training-list">
-          <li>Federal agency training in privacy, information security, accessibility, and Section 504/508 compliance.</li>
           <li>Professional training in MySQL, Java, Oracle Database, Cloud Applications, and Solaris 11.</li>
-          <li>CompTIA A+ Certification – May 2010.</li>
+          <li><strong>AWS Skill Builder</strong> — Certificates of Completion</li>
+          <li>
+            <strong>Microsoft Learn</strong>
+            <ul class="training-sublist">
+              <li>Azure Fundamentals (AZ-900)</li>
+              <li>Microsoft Security Fundamentals (SC-900)</li>
+              <li>Azure AI Fundamentals (AI-900)</li>
+              <li>Microsoft 365 Fundamentals (MS-900)</li>
+              <li>Microsoft Azure Administrator (AZ-104 prep)</li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://cs50.harvard.edu/ai/" target="_blank" rel="noopener noreferrer">CS50’s Introduction to Artificial Intelligence with Python</a>
+          </li>
         </ul>
-
-        <div class="cert-subsection">
-          <h3 class="cert-subsection-title">AWS Skill Builder — Certificates of Completion</h3>
-          <div class="cert-list">
-
-            <div class="cert-item">
-              <span class="cert-name">AWS Security Incident Response Overview</span>
-              <a class="cert-file-link" href="AWS/AWS_Security_Incident_Response_Overview.pdf" target="_blank" rel="noopener noreferrer">Certificate</a>
-            </div>
-
-            <div class="cert-item">
-              <span class="cert-name">Fundamentals of Machine Learning and Artificial Intelligence</span>
-              <a class="cert-file-link" href="AWS/Fundamentals_of_Machine_Learning_and_Artificial_Intelligence.pdf" target="_blank" rel="noopener noreferrer">Certificate</a>
-            </div>
-
-            <div class="cert-item">
-              <span class="cert-name">Fundamentals of Prompt Engineering with Claude</span>
-              <a class="cert-file-link" href="AWS/Fundamentals_of_Prompt_Engineering_with_Claude.pdf" target="_blank" rel="noopener noreferrer">Certificate</a>
-            </div>
-
-            <div class="cert-item">
-              <span class="cert-name">Getting Started with DevOps on AWS</span>
-              <a class="cert-file-link" href="AWS/Getting_Started_with_DevOps_on_AWS.pdf" target="_blank" rel="noopener noreferrer">Certificate</a>
-            </div>
-
-            <div class="cert-item">
-              <span class="cert-name">Cybersecurity for Small Business Owners</span>
-              <a class="cert-file-link" href="AWS/Cybersecurity_for_Small_Business_Owners.pdf" target="_blank" rel="noopener noreferrer">Certificate</a>
-            </div>
-
-          </div>
-        </div>
       </section>
 
       <section class="card">
