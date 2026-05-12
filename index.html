@@ -434,6 +434,37 @@
       letter-spacing: -0.01em;
     }
 
+    .promotion-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 14px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .job-role-divider {
+      margin: 20px 0 16px;
+      border: none;
+      border-top: 1px dashed rgba(148, 163, 184, 0.2);
+    }
+
+    .job-role-date {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
     .job ul {
       margin: 0;
       padding-left: 20px;
@@ -549,12 +580,14 @@
       font-weight: 700;
     }
 
-    .project-card ul {
+    .project-card ul,
+    .training-list {
       margin: 0;
       padding-left: 20px;
     }
 
-    .project-card li {
+    .project-card li,
+    .training-list li {
       color: var(--text-soft);
       line-height: 1.8;
       margin-bottom: 8px;
@@ -807,79 +840,81 @@
     </aside>
 
     <main class="content">
+
+      <!-- PROFESSIONAL SUMMARY -->
       <section class="card">
         <h2 class="card-title">Professional Summary</h2>
         <p class="summary-text">
-          IT support professional with experience in high-volume service desk operations, enterprise troubleshooting,
-          accessibility compliance, and end-user support across Microsoft, networking, VPN, file share, and infrastructure environments.
-          Recognized for strong first-call resolution, clear incident documentation, SLA-focused execution, and effective customer support.
-          Also developing AI-centered project work focused on workflow automation, knowledge retrieval, and productivity improvement for business and IT teams.
+          IT support professional with over 10 years of experience in high-volume service desk operations, enterprise troubleshooting,
+          accessibility compliance, and end-user support across Microsoft, networking, VPN, and infrastructure environments.
+          Recognized for strong first-call resolution, clear incident documentation, and SLA-focused execution.
+          Currently merging a decade of technical expertise with AI-driven productivity workflows, knowledge retrieval,
+          and automation solutions for modern enterprise teams.
         </p>
       </section>
 
+      <!-- PROFESSIONAL EXPERIENCE -->
       <section class="card">
         <h2 class="card-title">Professional Experience</h2>
         <div class="experience-list">
 
+          <!-- FM Global -->
           <div class="job">
             <div class="job-meta">
-              2024 – Present
-              <span class="job-company">FM Global</span>
+              June 2024 – Present
+              <span class="job-company">FM Global — Remote</span>
             </div>
             <div>
-              <h3 class="job-role">Service Desk Technician</h3>
+              <h3 class="job-role">Service Desk Analyst</h3>
               <ul>
-                <li>Handle 25–30 daily customer interactions in a high-volume, single point-of-contact help desk environment.</li>
-                <li>Maintain 80%+ first-call resolution through structured troubleshooting, diagnosis, and issue ownership.</li>
-                <li>Provide support for Microsoft Outlook, Active Directory file shares, VPN connectivity, network issues, and software installations.</li>
-                <li>Document incidents, resolutions, and troubleshooting steps in ServiceNow, ensuring accurate tracking and SLA compliance.</li>
-                <li>Serve as a customer advocate while partnering with internal teams to resolve escalated or complex technical issues.</li>
+                <li>Provide high-volume service desk support as a single point of contact for internal and external users, handling 25–30 daily customer interactions while maintaining 80%+ first-call resolution.</li>
+                <li>Troubleshoot Microsoft Outlook, Active Directory file shares, VPN connectivity, network issues, and software installations.</li>
+                <li>Document incidents and resolutions in ServiceNow to support SLA compliance and customer satisfaction.</li>
               </ul>
             </div>
           </div>
 
+          <!-- Yorktel -->
           <div class="job">
             <div class="job-meta">
-              2016 – 2024
-              <span class="job-company">Yorktel</span>
+              September 2016 – May 2024
+              <span class="job-company">Yorktel — Woodlawn, MD</span>
             </div>
             <div>
               <h3 class="job-role">SSA Support Engineer</h3>
               <ul>
-                <li>Supported federal training environments through Adobe Connect, maintaining 95%+ user satisfaction ratings.</li>
-                <li>Managed and configured Active Directory accounts, IP allocations, and SSTV network devices.</li>
-                <li>Coordinated hardware deployment logistics, ensuring timely delivery, setup, and operational readiness.</li>
-                <li>Provided accessibility support aligned with Section 504/508 requirements, improving usability and participation for users with disabilities.</li>
-                <li>Achieved an average resolution time of less than 3 days, consistently exceeding service expectations.</li>
+                <li>Supported federal employee training and technology operations by monitoring live Adobe Connect sessions and coordinating hardware deployment.</li>
+                <li>Assisted with network device configuration, Active Directory management, and IP address allocation support.</li>
+                <li>Maintained participant satisfaction above 95% and achieved an average resolution time under 3 days, exceeding SLA expectations and minimizing client downtime.</li>
               </ul>
             </div>
           </div>
 
+          <!-- Oracle (grouped with promotion) -->
           <div class="job">
             <div class="job-meta">
-              2013 – 2016
-              <span class="job-company">Oracle</span>
+              August 2012 – September 2016
+              <span class="job-company">Oracle — Columbia, MD</span>
             </div>
             <div>
-              <h3 class="job-role">Solution Analyst</h3>
+              <!-- Solutions Analyst (promoted role) -->
+              <h3 class="job-role">Solutions Analyst</h3>
+              <span class="promotion-badge">⬆ Promoted from Customer Support Analyst · Sep 2013</span>
               <ul>
-                <li>Delivered level-two support for complex technical issues using product documentation, lab testing, web resources, and internal knowledge systems.</li>
-                <li>Reduced Mean Time to Resolution by 20% through back-end troubleshooting, log analysis, database queries, and targeted MySQL field updates.</li>
+                <li>Provided Level 2 technical support for complex product and system issues using knowledge base resources, web research, lab testing, log file analysis, database queries, and MySQL updates.</li>
+                <li>Improved support efficiency by reducing Mean Time to Resolution by 20%.</li>
+                <li>Created documentation and troubleshooting guidance to enhance product performance and end-user satisfaction.</li>
               </ul>
-            </div>
-          </div>
 
-          <div class="job">
-            <div class="job-meta">
-              2012 – 2013
-              <span class="job-company">Oracle</span>
-            </div>
-            <div>
+              <hr class="job-role-divider">
+
+              <!-- Customer Support Analyst (original role) -->
               <h3 class="job-role">Customer Support Analyst</h3>
+              <span class="job-role-date">August 2012 – September 2013</span>
               <ul>
-                <li>Provided technical and functional support to Oracle’s global customer base through phone and electronic service channels.</li>
-                <li>Verified support entitlement and coordinated with the Support Operations HOST team when account clarification was required.</li>
-                <li>Handled a broad range of product and system-related service requests while maintaining strong customer communication.</li>
+                <li>Delivered technical and functional support to Oracle's global customer base through phone and electronic channels.</li>
+                <li>Managed product and system-related service requests while verifying customer support entitlement.</li>
+                <li>Collaborated with Support Operations teams to resolve entitlement issues and ensure timely and appropriate support access.</li>
               </ul>
             </div>
           </div>
@@ -887,74 +922,64 @@
         </div>
       </section>
 
+      <!-- TRAINING & CERTIFICATION -->
       <section class="card">
         <h2 class="card-title">Training &amp; Certification</h2>
 
         <div class="cert-subsection">
           <h3 class="cert-subsection-title">AWS Skill Builder — Certificates of Completion</h3>
           <div class="cert-list">
-
             <div class="cert-item">
               <span class="cert-name">AWS Security Incident Response Overview</span>
               <a class="cert-file-link" href="AWS/AWS_Security_Incident_Response_Overview.pdf" target="_blank" rel="noopener noreferrer">Certificate</a>
             </div>
-
             <div class="cert-item">
               <span class="cert-name">Fundamentals of Machine Learning and Artificial Intelligence</span>
               <a class="cert-file-link" href="AWS/Fundamentals_of_Machine_Learning_and_Artificial_Intelligence.pdf" target="_blank" rel="noopener noreferrer">Certificate</a>
             </div>
-
             <div class="cert-item">
               <span class="cert-name">Fundamentals of Prompt Engineering with Claude</span>
               <a class="cert-file-link" href="AWS/Fundamentals_of_Prompt_Engineering_with_Claude.pdf" target="_blank" rel="noopener noreferrer">Certificate</a>
             </div>
-
             <div class="cert-item">
               <span class="cert-name">Getting Started with DevOps on AWS</span>
               <a class="cert-file-link" href="AWS/Getting_Started_with_DevOps_on_AWS.pdf" target="_blank" rel="noopener noreferrer">Certificate</a>
             </div>
-
             <div class="cert-item">
               <span class="cert-name">Cybersecurity for Small Business Owners</span>
               <a class="cert-file-link" href="AWS/Cybersecurity_for_Small_Business_Owners.pdf" target="_blank" rel="noopener noreferrer">Certificate</a>
             </div>
-
           </div>
         </div>
 
         <div class="cert-subsection">
           <h3 class="cert-subsection-title">Microsoft Learn</h3>
           <div class="cert-list">
-
             <div class="cert-item">
               <span class="cert-name">Azure Fundamentals (AZ-900)</span>
               <a class="cert-file-link" href="#" target="_blank" rel="noopener noreferrer">Certificate</a>
             </div>
-
             <div class="cert-item">
               <span class="cert-name">Microsoft Security Fundamentals (SC-900)</span>
               <a class="cert-file-link" href="#" target="_blank" rel="noopener noreferrer">Certificate</a>
             </div>
-
             <div class="cert-item">
               <span class="cert-name">Azure AI Fundamentals (AI-900)</span>
               <a class="cert-file-link" href="#" target="_blank" rel="noopener noreferrer">Certificate</a>
             </div>
-
             <div class="cert-item">
               <span class="cert-name">Microsoft 365 Fundamentals (MS-900)</span>
               <a class="cert-file-link" href="#" target="_blank" rel="noopener noreferrer">Certificate</a>
             </div>
-
             <div class="cert-item">
               <span class="cert-name">Microsoft Azure Administrator (AZ-104 prep)</span>
               <a class="cert-file-link" href="#" target="_blank" rel="noopener noreferrer">Certificate</a>
             </div>
-
           </div>
         </div>
       </section>
 
+      <!-- TECHNICAL SNAPSHOT -->
       <section class="card">
         <h2 class="card-title">Technical Snapshot</h2>
         <div class="snapshot-grid">
@@ -977,6 +1002,7 @@
         </div>
       </section>
 
+      <!-- PROJECTS -->
       <section class="card">
         <h2 class="card-title">Projects</h2>
         <div class="project-grid">
